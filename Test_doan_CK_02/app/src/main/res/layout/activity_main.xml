@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Layout chính -->
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@drawable/layout_shape"
+            android:textSize="50dp"
+            android:textStyle="italic"
+            android:textColor="@color/white"
+            android:text="Anime Search"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <SearchView
+                android:id="@+id/sv_image_link"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:queryHint="Nhập link Ảnh..." />
+
+            <ImageButton
+                android:id="@+id/ib_image_fold"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#14000000"
+                app:srcCompat="@drawable/ic_folder_upload"
+                android:contentDescription="Chọn ảnh từ thư mục"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+
+            <ImageView
+                android:id="@+id/img_image_search"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                app:srcCompat="@drawable/ic_placeholder_image" />
+
+            <TextView
+                android:id="@+id/txt_frame_count"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp"
+                android:textColor="#FF9800"
+                android:visibility="gone"
+                android:text="frameCount" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_result"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+    <!-- NavigationView bọc trong DrawerLayout -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nv_left_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nv_header"
+        app:menu="@menu/menu_details"/>
+
+</androidx.drawerlayout.widget.DrawerLayout>

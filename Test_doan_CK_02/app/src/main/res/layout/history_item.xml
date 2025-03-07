@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txt_history_name"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#A6F846"
+        android:textColor="#10568C"
+        android:text="Name" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@android:color/darker_gray" />
+
+    <ImageView
+        android:id="@+id/iv_history_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_placeholder_image" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginBottom="10dp"
+        android:background="@android:color/darker_gray" />
+
+    <TextView
+        android:id="@+id/txt_history_datetime"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textColor="#FF5722"
+        android:text="DateTime" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginBottom="10dp"
+        android:background="@android:color/darker_gray" />
+</LinearLayout>

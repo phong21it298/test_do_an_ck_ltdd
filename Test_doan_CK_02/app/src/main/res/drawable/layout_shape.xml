@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--ctrl + shift + /: để ghi chú-->
+    <solid android:color="#88FFFF"/> <!--màu nền cho shape-->
+    <stroke
+        android:color="#0000FF"
+        android:width="1dp"
+        android:dashWidth="15dp"/>
+    <!--stroke là liên quan đến đường viền,
+     dashWidth là độ rộng của đoạn thẳng,
+     dashGap là khoảng cách giữa các đoạn thẳng-->
+    <!--thuộc tính size là kích thước của shape-->
+    <corners
+        android:bottomRightRadius="100dp"
+        android:topLeftRadius="100dp"/>
+    <!--corners là bo góc-->
+    <padding
+        android:top="10dp"
+        android:right="10dp"
+        android:bottom="10dp"
+        android:left="10dp"/>
+    <gradient
+        android:startColor="#fbc2eb"
+        android:centerColor="#a6c1ee"
+        android:endColor="#0000FF"
+        android:angle="45"/>
+    <!--gradient là trung chuyển từ màu này sang màu khác,
+     bắt đầu từ phía này sang phía khác, angle là góc trung chuyển ấy-->
+
+</shape>
