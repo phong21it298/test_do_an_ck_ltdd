@@ -2,6 +2,7 @@ package com.example.test_doan_ck_01
 
 import android.app.AlertDialog
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.Button
@@ -59,7 +60,12 @@ class HistoryActivity : AppCompatActivity() {
 
                         val itemData = itemSnap.getValue(AnimeDatabaseModel::class.java)
 
-                        history.add(itemData!!)
+                        if (itemData != null) {
+
+                            Log.d("FirebaseImage", "Image URL: ${itemData.animeImage}") // Thêm dòng này để debug
+
+                            history.add(itemData)
+                        }
                     }
 
                     //Đưa list data vào EmpAdapter để dán lên RecyclerView
